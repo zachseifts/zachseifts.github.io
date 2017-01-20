@@ -4,7 +4,7 @@ title: A Test thing
 ---
 {% for post in site.posts %}
 <h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-{{ post.content }}
+{{ post.excerpt }}
 {% endfor %}
 
 <ul>
