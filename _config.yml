@@ -4,3 +4,5 @@ exclude: [Gemfile, Gemfile.lock]
 paginate: 3
 paginate_path: "/posts/:num"
 
+sass:
+  style: compressed
