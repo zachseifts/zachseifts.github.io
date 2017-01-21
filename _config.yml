@@ -1,21 +1,22 @@
-name: My blog as a github pages thing.
+name: Zach Seifts's blog
 markdown: kramdown
 exclude: [Gemfile, Gemfile.lock]
 
+# Pagination
 paginate: 3
 paginate_path: "/posts/:num"
 
 sass:
   style: compressed
 
+# Load extra gems
 gems:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Jekyll SEO config
 title: Zach Seifts
-author: zach
-social:
-  name: Zach Seifts
 
+# Social things
 github: zachseifts
 untappd: notzach

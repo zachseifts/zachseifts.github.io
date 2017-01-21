@@ -2,9 +2,41 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date: "%m/%d/%Y" }}</p>
+<div class="row">
+  <div class="col mb-4">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+    <div id="post-meta" class="card">
+      <div class="card-block">
 
-<div class="post">
-  {{ content }}
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-7">
+              <h2>
+                {% for author in page.authors %}
+                  {{ author }}{% if forloop.last == false %},{% endif %}
+                {% endfor %}
+              </h2>
+              
+              <p>Published on: {{ page.date | date: "%A, %B %-d, %Y" }}</p>
+              {% if page.updated != null %}
+                <p>Last updated: {{ page.updated | date: "%A, %B %-d, %Y" }}</p>
+              {% endif %}
+              </p>
+            </div>
+            <div class="col-5">
+              <p class="lead">Phasellus faucibus, dui eget varius convallis, dolor ipsum finibus nisi, quis feugiat diam erat a erat. Proin semper volutpat erat sed faucibus.
+              <h3>Tags:</h3>
+              <ul>
+              {% for tag in page.tags %}
+                <li>{{ tag }}</li>
+              {% endfor %}
+              </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
