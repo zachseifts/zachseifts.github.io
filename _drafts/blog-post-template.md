@@ -3,8 +3,6 @@ layout: post
 title: "This is the title of this post"
 date: 2017-01-19
 updated: 2017-01-21
-authors:
-  - Zach Seifts
 tags:
   - Tag 1
   - Tag 2
