@@ -2,7 +2,14 @@
  * Sass for this blog
  */
 
-/**
-#thing .something {
+body {
+  background-color: $black;
+
+  #wrapper-content {
+    background-color: $white;
+  }
+
+  #wrapper-footer {
+    color: $white;
+  }
 }
-*/
