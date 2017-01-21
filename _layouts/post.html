@@ -27,16 +27,16 @@ layout: default
                 <p>Last updated: {{ page.updated | date: "%A, %B %-d, %Y" }}</p>
               {% endif %}
               </p>
+
+              {% if page.tags != null %}
+                <p>Tag(s): 
+                {% for tag in page.tags %}
+                  {%if forloop.last == true %} and {% endif %}{{ tag }}{% if forloop.last == false %},{% endif %}
+                {% endfor %}
+              {% endif %}
             </div>
             <div class="col-5">
-              <p class="lead">Phasellus faucibus, dui eget varius convallis, dolor ipsum finibus nisi, quis feugiat diam erat a erat. Proin semper volutpat erat sed faucibus.
-              <h3>Tags:</h3>
-              <ul>
-              {% for tag in page.tags %}
-                <li>{{ tag }}</li>
-              {% endfor %}
-              </ul>
-              </p>
+              <p class="lead">{{ site.post_description }}</p>
             </div>
           </div>
         </div>
